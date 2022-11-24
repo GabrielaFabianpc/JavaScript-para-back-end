@@ -51,7 +51,7 @@ console.log(arrayOriginal);
 */
 
 //Com base nessa matriz, qual dos códigos abaixo eu posso utilizar para imprimir a frase “Leonardo tem idade 28”?
-const funcionarios = [
+/*const funcionarios = [
   ["Ana", "Juliana", "Leonardo"],
   [30, 35, 28],
 ];
@@ -68,3 +68,11 @@ const valor = [
   [8, 5, 3],
 ];
 console.log(`A ${valor[0][0]} tirou nota ${valor[1][0]} na prova`);
+*/
+
+const arrayNums = [1, 2, 3, 4];
+
+const multiplica = arrayNums.map((nums) => {
+  return nums * 10;
+});
+console.log(multiplica);
