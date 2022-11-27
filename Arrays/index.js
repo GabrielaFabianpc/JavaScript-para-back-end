@@ -70,9 +70,19 @@ const valor = [
 console.log(`A ${valor[0][0]} tirou nota ${valor[1][0]} na prova`);
 */
 
-const arrayNums = [1, 2, 3, 4];
+/*const arrayNums = [1, 2, 3, 4];
 
 const multiplica = arrayNums.map((nums) => {
   return nums * 10;
 });
 console.log(multiplica);
+*/
+
+const numeros = [43, 50, 65, 12];
+
+function somandoTudo(soma) {
+  const resultado = soma.reduce((acc, numero) => acc + numero, 0);
+  const media = resultado / soma.length;
+  return media;
+}
+console.log(`O valor de numeros com sua média é ${somandoTudo(numeros)}`);

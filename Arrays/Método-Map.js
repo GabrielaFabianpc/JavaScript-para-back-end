@@ -1,9 +1,13 @@
 //Média com forEach
 /*const notas = [10, 9.5, 8, 7, 6];
 notas.forEach((nota) => {
-  console.log((nota += 1));
+  if (nota >= 10) {
+    console.log(10);
+  } else {
+    console.log((nota += 1));
+  }
 });
- */
+*/
 
 //Média com map
 const notas = [10, 9.5, 8, 7, 6];
