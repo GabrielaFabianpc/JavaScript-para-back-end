@@ -19,5 +19,5 @@ console.log(arr1); // [3, 4, 5, 0, 1, 2]
 const myFunction = (a, b, c) => {
   return a + b + c;
 };
-const numeros = [5, 5, 5];
+const numeros = [1, 1, 1];
 console.log(myFunction(...numeros));
