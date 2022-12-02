@@ -21,7 +21,7 @@ function apresentacao() {
   return "ola";
 }
 
-console.log(somaa());
-const somaa = function (numero1, numero2) {
+console.log(apresentar(2, 2));
+function apresentar(numero1, numero2) {
   return numero1 + numero2;
-};
+}
