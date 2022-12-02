@@ -20,3 +20,6 @@ console.log(somandoNumerosPequenos(11, 5));
 
 const meuNome = (nome) => `Meu nome é ${nome}`;
 console.log(meuNome("Gabriela"));
+
+const idade = (idade) => `Minha idade é ${idade}`;
+console.log(idade(20));

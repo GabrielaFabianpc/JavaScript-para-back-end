@@ -21,7 +21,7 @@ function apresentacao() {
   return "ola";
 }
 
-console.log(apresentar(2, 2));
+console.log(apresentar(1, 1));
 function apresentar(numero1, numero2) {
   return numero1 + numero2;
 }
