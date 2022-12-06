@@ -2,25 +2,27 @@ const minhasInformacoes = {
   nome: "Gabi",
   idade: 20,
   altura: 1.6,
-  profissao: "Desenvolvedora de Software",
-  telefone: 31983431155,
+  telefone: 3198888888,
 };
-minhasInformacoes.telefone = [31983431155, 31983311222];
-minhasInformacoes.telefone.splice([1]);
+minhasInformacoes.telefone = [3198888888, 3199999999];
 minhasInformacoes.signo = "Escorpiao";
-console.log(minhasInformacoes);
-minhasInformacoes.cidadeEBairro = [
+minhasInformacoes.telefone.splice(0, 1);
+
+minhasInformacoes.endereco = [
   {
-    cidade: "Oi",
-    bairro: "Ola",
+    cidade: "Belo Horizonte",
+    bairro: "Lourdes",
+    apartamento: false,
   },
 ];
-minhasInformacoes.cidadeEBairro.push({
-  cidade: "Hi",
-  bairro: "Hello",
-});
 
-const meuBairro = minhasInformacoes.cidadeEBairro.filter((bairro) => {
-  return bairro.bairro === "Hello";
+minhasInformacoes.endereco.push({
+  cidade: "Rio de Janeiro",
+  bairro: "Copacabana",
+  apartamento: true,
 });
-console.log(meuBairro);
+const apartamento = minhasInformacoes.endereco.filter((ap) => {
+  return ap.apartamento === true;
+});
+console.log(minhasInformacoes);
+console.log(apartamento);
