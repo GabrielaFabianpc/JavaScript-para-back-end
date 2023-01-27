@@ -82,7 +82,8 @@ const cidade = testeNovo.endereço.filter((cidade) => {
 });
 
 const chave = Object.keys(testeNovo);
-console.log(chave);
+/*console.log(chave);
 console.log(testeNovo);
 console.log(cidade);
 console.log(entrega);
+*/
