@@ -1,4 +1,4 @@
-/*function User(nome, email) {
+function User(nome, email) {
   this.nome = nome;
   this.email = email;
 
@@ -6,20 +6,19 @@
     return `${this.nome}, ${this.email}`;
   };
 }
-//let user1 = new User("Gabi", "g@f.com");
-//console.log(user1.exibirInfos());
+const user1 = new User("Gabi", "g@f.com");
+console.log(user1.exibirInfos());
 
 function Admin(role) {
   User.call(this, "Gabi", "g@f.com");
   this.role = role || "estudante";
 }
 
-//Admin.prototype = Object.create(User.prototype);
-//const novoUser = new Admin("admin");
+Admin.prototype = Object.create(User.prototype); //os prototipos de user estão sendo passados para admin
+const novoUser = new Admin("admin");
 
 console.log(novoUser.exibirInfos());
 console.log(novoUser.role);
-*/
 
 const user = {
   init: function (nome, email) {
@@ -30,8 +29,8 @@ const user = {
     return this.nome;
   },
 };
-const novoUser = Object.create(user);
-novoUser.init("Gabi", "g@f.com");
-console.log(novoUser);
-console.log(novoUser.exibirInfos());
+const novoUserr = Object.create(user);
+novoUserr.init("Gabi", "g@f.com");
+console.log(novoUserr);
+console.log(novoUserr.exibirInfos());
 //console.log(user.isPrototypeOf(novoUser));

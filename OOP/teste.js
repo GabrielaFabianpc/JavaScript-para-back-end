@@ -48,4 +48,30 @@ let pessoa1 = new teste("Gabi", 20);
 let pessoa2 = new teste("Bruce", 27);
 pessoa1.greeting();
 pessoa2.greeting();
-console.log(teste);
+
+//Usando Object.create
+const usuario = {
+  init: function (nome, cidade) {
+    this.nome = nome;
+    this.cidade = cidade;
+  },
+  informacoes: function (nome, cidade) {
+    return `O nome do cliente é ${this.nome} e sua cidade é ${this.cidade}`;
+  },
+};
+const usuarioNovo = Object.create(usuario);
+usuarioNovo.init("Gabi", "Belo Horizonte");
+console.log(usuarioNovo);
+console.log(usuarioNovo.informacoes());
+
+//Usando New
+function usuarios(nome, cidade) {
+  this.nome = nome;
+  this.cidade = cidade;
+
+  this.info = function () {
+    return `O nome do cliente é ${this.nome} e sua cidade é ${this.cidade}`;
+  };
+}
+const usuaria = new usuarios("Gabi", "São Paulo");
+console.log(usuaria.info());
