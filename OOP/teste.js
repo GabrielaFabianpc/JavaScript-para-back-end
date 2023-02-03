@@ -1,39 +1,3 @@
-function person(first, last, age, gender, interests) {
-  this.name = {
-    first: first,
-    last: last,
-  };
-  this.age = age;
-  this.gender = gender;
-  this.interests = interests;
-  this.bio = function () {
-    console.log(
-      this.name.first +
-        " " +
-        this.name.last +
-        " is " +
-        this.age +
-        " years old. Likes " +
-        this.interests[0] +
-        " and " +
-        this.interests[1] +
-        "."
-    );
-  };
-  this.greeting = function () {
-    console.log("Hi! I'm " + this.name.first + ".");
-  };
-}
-var person1 = new person("Bob", "Willer", 20, "Male", ["music", "skiing"]);
-var person2 = new person("Sarah", "Muller", 25, "Woman", [
-  "Dancing",
-  "To Sing",
-]);
-person1.greeting();
-person1.bio();
-person2.bio();
-person2.greeting();
-
 function teste(nome, idade) {
   this.nome = nome;
   this.idade = idade;
@@ -61,8 +25,8 @@ const usuario = {
 };
 const usuarioNovo = Object.create(usuario);
 usuarioNovo.init("Gabi", "Belo Horizonte");
-console.log(usuarioNovo);
-console.log(usuarioNovo.informacoes());
+//console.log(usuarioNovo);
+//console.log(usuarioNovo.informacoes());
 
 //Usando New
 function usuarios(nome, cidade) {
@@ -75,3 +39,20 @@ function usuarios(nome, cidade) {
 }
 const usuaria = new usuarios("Gabi", "São Paulo");
 console.log(usuaria.info());
+
+//Usando Class
+class Usuario {
+  constructor(name, idade, email, cidade) {
+    this.name = name;
+    this.idade = idade;
+    this.email = email;
+    this.cidade = cidade;
+  }
+
+  exibirInfos() {
+    return `O nome do nosso cliente é ${this.name}, tem ${this.idade} anos, possui o email: ${this.email}, e mora na cidade ${this.cidade}`;
+  }
+}
+const userNovo = new Usuario("Gabi", "22", "g@g.com", "São Paulo");
+console.log(userNovo);
+console.log(userNovo.exibirInfos());

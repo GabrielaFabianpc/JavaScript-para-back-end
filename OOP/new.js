@@ -14,7 +14,7 @@ function Admin(role) {
   this.role = role || "estudante";
 }
 
-Admin.prototype = Object.create(User.prototype); //os prototipos de user estão sendo passados para admin
+Admin.prototype = Object.create(User.prototype); //os prototipos de user estão sendo passados para admin.
 const novoUser = new Admin("admin");
 
 console.log(novoUser.exibirInfos());

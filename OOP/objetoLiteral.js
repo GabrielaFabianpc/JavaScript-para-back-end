@@ -9,7 +9,7 @@ const userr = {
   },
 };
 const admin = {
-  nome: "Mariana",
+  nome: "Maria",
   email: "m@m.com",
   role: "admin",
   criarCurso() {
